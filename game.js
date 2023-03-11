@@ -1,17 +1,16 @@
 //create a function to return a random choice as the computer choice using Math.random()
 
 function getComputerChoice() {
-    const choices = ['Rock', 'Paper', 'Scissors'];
+    const choices = ['rock', 'paper', 'scissors']; //they should be stings so I quoted them
     
     let choiceIndex = getRandomInt(0,3); //returns an integer between 0 and 2
     //console.log(choiceIndex);
     let computerChoice =  choices[choiceIndex];
-    console.log(computerChoice);
     return(computerChoice); 
     
 }
 //call the function
-getComputerChoice();
+console.log(getComputerChoice());
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -23,21 +22,28 @@ function getRandomInt(min, max) {
 //player selection 
 
 function playerSelection() {
-    let userChoice = prompt('Rock or paper or scissors?');
-    console.log(userChoice);
+    let playerChoice = prompt('Rock or paper or scissors?');
+    //case insensitivity 
+    playerChoice.toLowerCase();
+    return playerChoice;
 }
 //call
-playerSelection();
+console.log(playerSelection());
 
 //*********************************
 
 // checks who wins/loses, the user or the computer
 
-function playRound(userChoice, ){
-    if (playerSelection === getComputerChoice ){
-        return("it's a tie!")
-        console.log('its a tie')
-    }
+function playRound(playerChoice, computerChoice ){
+    if (playerChoice === computerChoice){
+        //console.log('It is a tie')
+        return("it's a tie!") ;  
+    }else if (playerChoice == 'rock' && computerChoice == 'paper') { 
+        return('computer chose paper! so computer wins.');// one score for computer should be added
+    }//BUG: NO MATTER WHAT IT RETURNS ITS A TIE!!!!
+    
+    //maybe using switch is better as we have lots of conditions but it didn't work try it later
 }
-playRound();
+//call
+console.log(playRound());
 
