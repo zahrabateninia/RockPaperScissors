@@ -35,15 +35,15 @@ console.log(playerSelection());
 // checks who wins/loses, the user or the computer
 
 function playRound(playerSelection, getComputerChoice){
-    if (playerSelection === getComputerChoice ){
-        console.log('It is a tie')
+    if(playerSelection === getComputerChoice ){
         return("it's a tie!") ;  
-    }else if (playerSelection === 'rock' && getComputerChoice === 'paper') { 
+    }else if (playerChoice === 'rock' && computerChoice === 'paper') { 
+        console.log('computer wins')
         return('computer chose paper! so computer wins.');// one score for computer should be added
-    }//BUG: NO MATTER WHAT IT RETURNS ITS A TIE!!!! fixed
-    //BUG: THE FUNCTION RETURNS UNDEFINED!!
-    //maybe using switch is better as we have lots of conditions but it didn't work try it later
+     }
+    
+    
 }
 //call
-console.log(playRound(playerSelection,getComputerChoice)); // we should pass some parameters
+console.log(playRound()); // we should pass some parameters
 
