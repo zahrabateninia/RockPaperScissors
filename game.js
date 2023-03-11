@@ -5,7 +5,7 @@ function getComputerChoice() {
     
     let choiceIndex = getRandomInt(0,3); //returns an integer between 0 and 2
     //console.log(choiceIndex);
-    let computerChoice =  choices[choiceIndex];
+    let computerChoice =  choices[choiceIndex]; //local , cannot be used out side of this scope!
     return(computerChoice); 
     
 }
@@ -34,16 +34,16 @@ console.log(playerSelection());
 
 // checks who wins/loses, the user or the computer
 
-function playRound(playerChoice, computerChoice ){
-    if (playerChoice === computerChoice){
-        //console.log('It is a tie')
+function playRound(playerSelection, getComputerChoice){
+    if (playerSelection === getComputerChoice ){
+        console.log('It is a tie')
         return("it's a tie!") ;  
-    }else if (playerChoice == 'rock' && computerChoice == 'paper') { 
+    }else if (playerSelection === 'rock' && getComputerChoice === 'paper') { 
         return('computer chose paper! so computer wins.');// one score for computer should be added
-    }//BUG: NO MATTER WHAT IT RETURNS ITS A TIE!!!!
-    
+    }//BUG: NO MATTER WHAT IT RETURNS ITS A TIE!!!! fixed
+    //BUG: THE FUNCTION RETURNS UNDEFINED!!
     //maybe using switch is better as we have lots of conditions but it didn't work try it later
 }
 //call
-console.log(playRound());
+console.log(playRound(playerSelection,getComputerChoice)); // we should pass some parameters
 
