@@ -9,8 +9,6 @@ function getComputerChoice() {
     return(computerChoice); 
     
 }
-//call the function
-console.log(getComputerChoice());
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -25,25 +23,25 @@ function playerSelection() {
     let playerChoice = prompt('Rock or paper or scissors?');
     //case insensitivity 
     playerChoice.toLowerCase();
-    return playerChoice;
+    return playerChoice;//local
 }
-//call
-console.log(playerSelection());
 
 //*********************************
 
 // checks who wins/loses, the user or the computer
 
-function playRound(playerSelection, getComputerChoice){
-    if(playerSelection === getComputerChoice ){
-        return("it's a tie!") ;  
-    }else if (playerChoice === 'rock' && computerChoice === 'paper') { 
-        console.log('computer wins')
-        return('computer chose paper! so computer wins.');// one score for computer should be added
+function playRound(player, computer){
+    console.log(player+ ' ' +computer);
+    if(player === computer ){ //whenever you wanna use a function you must call it with parenthesis
+        return("it's a tie!") ;   
+    }else if ((player=== 'rock' && computer === 'paper') || (player==='paper' && computer==='scissors') 
+    || (player==='scissors' && computer==='rock')) { 
+        return('computer wins.'); 
+     }else{
+        return('you won!');
      }
     
-    
-}
+    }   
 //call
-console.log(playRound()); // we should pass some parameters
-
+console.log(playRound(playerSelection(), getComputerChoice())); // we should pass some parameters
+// remember it is best practice to make your variables local so if they had the same names it wont make trouble for you 
