@@ -37,15 +37,15 @@ let playerCount = 0;
 function playRound(player, computer){
     console.log('You chose '+player+ ' and the computer chose ' +computer+'\n' +'As a result: ');
     if(player === computer ){ //whenever you wanna use a function you must call it with parenthesis
-        computerCount++;
-        playerCount++;
+        //console.log(computerCount++);
+        console.log(playerCount++);
         return("it's a tie!") ;   
     }else if ((player=== 'rock' && computer === 'paper') || (player==='paper' && computer==='scissors') 
     || (player==='scissors' && computer==='rock')) { 
-        computerCount++;
+        //console.log(computerCount++);
         return('computer wins.'); 
      }else{
-        playerCount++;
+        console.log(playerCount++);
         return('you won!');
      }
     
@@ -56,9 +56,11 @@ console.log(playRound(playerSelection(), getComputerChoice())); // we should pas
 //******************************************
 //if the computer or the player reached 5 times wining stop the game 
 while(true){// there are infinite possibilities
+    getComputerChoice();
+    playerSelection();
     playRound();
     
-    if ((computerCount === 5) || (playerCount === 5) ){
+    if ((computerCount === 6) || (playerCount === 6) ){
         break;
     }
 }
