@@ -50,15 +50,11 @@ function playRound(player, computer){
      }
     
     }   
-//call
-console.log(playRound(playerSelection(), getComputerChoice())); // we should pass some parameters
-// remember it is best practice to make your variables local so if they had the same names it wont make trouble for you 
+
 //******************************************
 //if the computer or the player reached 5 times wining stop the game 
 while(true){// there are infinite possibilities
-    getComputerChoice();
-    playerSelection();
-    playRound();
+    console.log(playRound(playerSelection(), getComputerChoice())); 
     
     if ((computerCount === 6) || (playerCount === 6) ){
         break;
