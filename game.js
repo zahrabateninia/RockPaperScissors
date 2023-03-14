@@ -23,8 +23,10 @@ function playerSelection() {
 }
 
 //*********************************
-let computerCount = 1;
-let playerCount = 1; 
+let computerCount = 0;
+let playerCount = 0; 
+console.log('The computer point:' + computerCount);
+console.log('Your point:' + playerCount);
 
 function playRound(player, computer){
     console.log('You chose '+player+ ' and the computer chose ' +computer+'\n' +'As a result: ');
@@ -33,10 +35,15 @@ function playRound(player, computer){
 
     }else if ((player=== 'rock' && computer === 'paper') || (player==='paper' && computer==='scissors') 
     || (player==='scissors' && computer==='rock')) { 
-        console.log("The computer's point:" + computerCount++)
+        computerCount++;
+        console.log("The computer's point:" + computerCount);
+        console.log('Your point:' + playerCount);
+
         return('The computer wins.'); 
      }else{
-        console.log('Your point:' + playerCount++);
+        playerCount++;
+        console.log('Your point:' + playerCount);
+        console.log("The computer's point:" + computerCount);
         return('You win!');
      }
     
