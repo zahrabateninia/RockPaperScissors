@@ -2,7 +2,6 @@ function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors']; 
     
     let choiceIndex = getRandomInt(0,3); 
-    //console.log(choiceIndex);
     let computerChoice =  choices[choiceIndex]; 
     return(computerChoice); 
     
@@ -17,9 +16,8 @@ function getRandomInt(min, max) {
 
 function playerSelection() {
     let playerChoice = prompt('Rock or paper or scissors?');
-    //case insensitivity 
-    playerChoice.toLowerCase();
-    return playerChoice;//local
+    //case insensitivity
+    return playerChoice.toLowerCase();//local
 }
 
 //*********************************
@@ -56,10 +54,10 @@ while(true){
 
     console.log(playRound(playerSelection(), getComputerChoice())); 
     
-    if (computerCount === 6){
+    if (computerCount === 5){
         console.log('The computer won the game!');
         break;
-    }else if (playerCount === 6){
+    }else if (playerCount === 5){
         console.log('You beat the computer five times so you won! bravo.');
         break;
     }
