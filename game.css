@@ -1,0 +1,64 @@
+:root {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.87);
+    --pink-color:  rgb(215, 29, 166);
+}
+header {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px  rgb(215, 29, 166);
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    font-style: italic;
+}
+#buttons {
+    display: flex;
+    flex: content;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--pink-color);
+
+}
+.buttons > img{
+    width:200px;
+    height: 200px;
+}
+.button {
+    margin: 20px;
+    opacity: .9;
+}
+.button:hover {
+    transition: .5s ease; 
+    opacity: 1;
+    border-radius: 10px;
+    
+}
+.display-score {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.textOfScore {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 4px 4px 4px  rgb(215, 29, 166);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 7px solid var(--pink-color);
+    border-radius: 12px;
+    padding: 10px 50px;
+    margin: 30px ;
+
+    
+}
+
+#player-score {
+    align-self: center;
+}
+#computer-score {
+    align-self: center;
+}

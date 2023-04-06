@@ -15,33 +15,36 @@ function getRandomInt(min, max) {
 //***************************** 
 
 function playerSelection() {
-    let playerChoice = prompt('Rock or paper or scissors?');
-    //case insensitivity
-    return playerChoice.toLowerCase();//local
+    // let playerChoice = prompt('Rock or paper or scissors?');
+    // //case insensitivity
+    // return playerChoice.toLowerCase();//local
 }
 
 //*********************************
 let computerCount = 0;
-let playerCount = 0; 
-console.log('The computer point:' + computerCount);
-console.log('Your point:' + playerCount);
+// let playerCount = 0; 
+// console.log('The computer point:' + computerCount);
+// console.log('Your point:' + playerCount);
 
 function playRound(player, computer){
-    console.log('You chose '+player+ ' and the computer chose ' +computer+'\n' +'As a result: ');
+    // console.log('You chose '+player+ ' and the computer chose ' +computer+'\n' +'As a result: ');
     if(player === computer ){ 
         return("It's a tie!") ;  
+
+        //
 
     }else if ((player=== 'rock' && computer === 'paper') || (player==='paper' && computer==='scissors') 
     || (player==='scissors' && computer==='rock')) { 
         computerCount++;
-        console.log("The computer's point:" + computerCount);
-        console.log('Your point:' + playerCount);
+        //
+        // console.log("The computer's point:" + computerCount);
+        // console.log('Your point:' + playerCount);
 
         return('The computer wins.'); 
      }else{
         playerCount++;
-        console.log('Your point:' + playerCount);
-        console.log("The computer's point:" + computerCount);
+        // console.log('Your point:' + playerCount);
+        // console.log("The computer's point:" + computerCount);
         return('You win!');
      }
     
