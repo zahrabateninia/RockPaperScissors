@@ -17,9 +17,8 @@ function getRandomInt(min, max) {
 function playRound(player, computer){
     let playerScore =document.querySelector('#player-score');
     let computerScore = document.querySelector('#computer-score');
-    console.log(player +computer);
+
     if(player === computer ){ 
-        console.log("it is a tie");
         return; }
 
     else if ((player=== 'rock' && computer === 'paper') || (player==='paper' && computer==='scissors') 
@@ -28,9 +27,21 @@ function playRound(player, computer){
     }else{
          ++playerScore.textContent;
      };
-     
-    
+
+     if (computerScore.textContent == 5){
+         let computerWins = document.querySelector('#computer-wins');
+         computerWins.style.display = 'block';
+         computerScore.textContent = 0;
+         playerScore.textContent = 0;
+        }else if ( playerScore.textContent == 5 ){
+         let playerWins = document.querySelector('#player-wins');
+         playerWins.style.display = 'block'; 
+        computerScore.textContent = 0;
+        playerScore.textContent = 0;
+
+     }
     }
+
 
 
 //******************************************
