@@ -10,58 +10,27 @@ function getComputerChoice() {
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min) + min); 
 }
 //***************************** 
 
-function playerSelection() {
-    // let playerChoice = prompt('Rock or paper or scissors?');
-    // //case insensitivity
-    // return playerChoice.toLowerCase();//local
-}
-
-//*********************************
-let computerCount = 0;
-// let playerCount = 0; 
-// console.log('The computer point:' + computerCount);
-// console.log('Your point:' + playerCount);
-
 function playRound(player, computer){
-    // console.log('You chose '+player+ ' and the computer chose ' +computer+'\n' +'As a result: ');
+    let playerScore =document.querySelector('#player-score');
+    let computerScore = document.querySelector('#computer-score');
+    console.log(player +computer);
     if(player === computer ){ 
-        return("It's a tie!") ;  
+        console.log("it is a tie");
+        return; }
 
-        //
-
-    }else if ((player=== 'rock' && computer === 'paper') || (player==='paper' && computer==='scissors') 
-    || (player==='scissors' && computer==='rock')) { 
-        computerCount++;
-        //
-        // console.log("The computer's point:" + computerCount);
-        // console.log('Your point:' + playerCount);
-
-        return('The computer wins.'); 
-     }else{
-        playerCount++;
-        // console.log('Your point:' + playerCount);
-        // console.log("The computer's point:" + computerCount);
-        return('You win!');
-     }
+    else if ((player=== 'rock' && computer === 'paper') || (player==='paper' && computer==='scissors') 
+    || (player==='scissors' && computer==='rock')) {
+        ++computerScore.textContent;
+    }else{
+         ++playerScore.textContent;
+     };
+     
     
-    }   
+    }
+
 
 //******************************************
-//if the computer or the player reached 5 times wining stop the game 
-
-while(true){
-
-    console.log(playRound(playerSelection(), getComputerChoice())); 
-    
-    if (computerCount === 5){
-        console.log('The computer won the game!');
-        break;
-    }else if (playerCount === 5){
-        console.log('You beat the computer five times so you won! bravo.');
-        break;
-    }
-}

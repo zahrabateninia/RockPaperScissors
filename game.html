@@ -13,21 +13,20 @@
         Choose Your Weapon:
     </header>
     <div id="buttons">
-        <button id="paper-btn" class="button">
+    <button onclick="playRound('paper', getComputerChoice())" id="paper-btn" class="button">
             <img src="images/paper.jpeg" alt="Paper">
         </button>
-        <button id="rock-btn" class="button">
+        <button  onclick="playRound('rock', getComputerChoice())" id="rock-btn" class="button">
             <img src="images/rock.jpeg" alt="Rock">
         </button>
-        <button id="scissors-btn" class="button">
+        <button  onclick="playRound('scissors', getComputerChoice())" id="scissors-btn" class="button">
             <img src="images/scissors.jpeg" alt="Scissors">
         </button>
     </div>
     <div class="display-score">
         <div class="textOfScore" >
             <p>Your Score:</p>
-            <p id="player-score">0
-            </p>
+            <p id="player-score">0</p>
         </div>
 
         <div class="textOfScore" >
