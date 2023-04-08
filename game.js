@@ -45,3 +45,4 @@ function playRound(player, computer){
 
 
 //******************************************
+//refresh the website

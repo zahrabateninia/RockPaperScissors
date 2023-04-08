@@ -48,7 +48,8 @@ header {
     gap: 30px;
 }
 .textOfScore {
-    font-size: 1rem;
+    box-shadow: 3px 3px 4px violet;
+    font-size: 1.5rem;
     color: white;
     text-shadow: 4px 4px 4px  var(--pink-color);
     display: flex;
@@ -56,7 +57,7 @@ header {
     flex-direction: column;
     border: 2px solid var(--pink-color);
     border-radius: 12px;
-    padding: 10px 50px;
+    padding: 3px 30px;
     margin: 30px ;
 
     
@@ -84,4 +85,22 @@ header {
     display: none;
     align-self: center;
 
+}
+.refresh-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+#refresh-btn {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    padding: .5rem;
+    color: black;
+    border-radius: 6px;
+    background-color: var(--pink-color);
+}
+#refresh-btn:hover{
+    background-color: rgb(54, 54, 242);
 }
